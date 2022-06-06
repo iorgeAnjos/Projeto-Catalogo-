@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="menu">
+      <ul>
+        <li><img src="img/yugioh.png" alt="" /></li>
+        <li><a href="#inicio">Inicio</a></li>
+        <li>Cadastro</li>
+        <li><a href="#rei">Deck</a></li>
+      </ul>
+    </nav>
+    <header id="inicio">
+      <img 
+        src="img/yugi.jpg"
+        alt=""
+      />
+    </header>
+    <main>
+        <section id="rei">
+            <% deck.forEach((cards)=>{%>
+                <div class="reis">
+                    <img src="<%=cards.img %>" alt="">
+                    <p><%= cards.nome %></p>
+                    
+                </div>
+            <%})%>
+        </section>
+
+    </main>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
