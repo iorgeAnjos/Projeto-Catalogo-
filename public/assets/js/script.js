@@ -50,4 +50,40 @@ function smoothScrollTo(endX, endY, duration) {
     window.scroll(newX, newY);
   }, 1000 / 60); // 60 fps
 };
- 
+ function cadastro(){
+  Swal.fire({
+    position: 'top-end',
+    icon: 'success',
+    title: 'Deck salvo com êxito',
+    showConfirmButton: false,
+    timer: 2000
+  })
+ }
+ function editar(){
+  Swal.fire({
+    position: 'top-end',
+    icon: 'success',
+    title: 'Deck alterado com êxito',
+    showConfirmButton: false,
+    timer: 2000
+  })
+ }
+ function apagar(){
+  Swal.fire({
+    title: 'Are you sure?',
+    text: "You won't be able to revert this!",
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes, delete it!'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire(
+        'Deleted!',
+        'Your file has been deleted.',
+        'success'
+      )
+    }
+  })
+ }

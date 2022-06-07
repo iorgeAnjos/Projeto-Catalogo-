@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <title><%= deck[id].nome %>></title>
+  </head>
+  <body id="details">
+    <nav class="menu">
+      <ul>
+        <li><img src="/img/yugioh.png" alt="" /></li>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/cadastro">Cadastro</a></li>
+        <li> <a id="editar" href="/update/<%= deck[id].id %>">Editar</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h2 id="descri"><%= deck[id].descricao %></h2>
+
+      <div class="itens">
+        <img class="img" src="<%= deck[id].card1 %>" alt="apareça" />
+        <img class="img" src="<%= deck[id].card2 %>" alt="apareça" />
+        <img class="img" src="<%= deck[id].card3 %>" alt="apareça" />
+      </div>
+    </main>
+  </body>
+</html>
