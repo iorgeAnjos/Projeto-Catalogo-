@@ -20,10 +20,22 @@
       <h2 id="descri"><%= deck[id].descricao %></h2>
 
       <div class="itens">
-        <img class="img" src="<%= deck[id].card1 %>" alt="apareça" />
+        <div class="zoom">
+          <img class="img" src="<%= deck[id].card1 %>" alt="apareça" />
+        </div>
+       <div class="zoom">
         <img class="img" src="<%= deck[id].card2 %>" alt="apareça" />
+       </div>
+       <div class="zoom">
         <img class="img" src="<%= deck[id].card3 %>" alt="apareça" />
+       </div>
+        
       </div>
     </main>
+    <footer>
+      <p>
+        <a href="https://github.com/iorgeAnjos">@iorgeAnjos</a>
+      </p>
+    </footer>
   </body>
 </html>

@@ -40,13 +40,13 @@ nav ul li a {
   color: inherit;
 }
 
+nav ul li img {
+  width: 150px;
+}
+
 header img {
   width: 100%;
   padding-top: 2rem;
-}
-
-nav ul li img {
-  width: 150px;
 }
 
 main div.reis {
@@ -56,6 +56,13 @@ main div.reis {
   text-align: center;
   font-size: 1.5rem;
   padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+main #rei h1 {
+  font-size: 5rem;
+  padding-bottom: 5rem;
+  text-align: center;
 }
 
 #details {
@@ -86,6 +93,22 @@ main div.reis {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  padding-bottom: 5rem;
+}
+
+.zoom {
+  overflow: hidden;
+}
+
+.zoom img {
+  max-width: 100%;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.zoom:hover img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 #registro {
@@ -101,7 +124,7 @@ main div.reis {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding-top: 5rem;
+  padding: 5rem 0 5rem 0;
   color: #dfdb9b;
 }
 
@@ -142,10 +165,60 @@ section#cadastro form button:hover {
   border: solid 1px #dfdb9b;
 }
 
+#edicao {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-top: 5rem;
+  color: #dfdb9b;
+}
+
+#edicao input {
+  width: 100%;
+  padding: 0.6rem;
+  font-size: 1.1rem;
+  border-bottom-left-radius: 2rem;
+  margin: 0 0 2rem 0;
+  -webkit-box-shadow: 0 0 0 0;
+          box-shadow: 0 0 0 0;
+  outline: 0;
+  background-color: #858585;
+  color: #880000;
+}
+
+section#edicao form button {
+  padding: 0.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1rem;
+  background-color: #dfdb9b;
+  border: solid 1px #dfdb9b;
+  color: black;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+section#edicao form button:hover {
+  background-color: black;
+  color: #dfdb9b;
+  border: solid 1px #dfdb9b;
+}
+
 footer {
   background-color: #dfdb9b;
   color: black;
-  padding: 0 0 .5rem 0;
+  padding: 0 0 0.5rem 0;
   text-align: center;
   position: fixed;
   bottom: 0;
@@ -161,6 +234,7 @@ footer a {
 #apagardiv {
   text-align: center;
   margin-top: 1rem;
+  margin-bottom: 4rem;
 }
 
 #apagar {
@@ -177,5 +251,35 @@ footer a {
   background-color: black;
   color: #dfdb9b;
   border: solid 1px #dfdb9b;
+}
+
+@media (max-width: 500px) {
+  nav ul li {
+    font-size: 1.2rem;
+    padding: 0.6rem;
+  }
+  nav ul li img {
+    width: 100px;
+  }
+  main #rei h1 {
+    font-size: 4rem;
+    padding-bottom: 4rem;
+    text-align: center;
+  }
+  .itens {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 280px) {
+  nav ul li {
+    padding: 0.3rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
 }
 /*# sourceMappingURL=style.css.map */

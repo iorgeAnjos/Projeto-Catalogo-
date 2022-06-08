@@ -17,7 +17,7 @@
     </nav>
     
     <main id="registro">
-        <section id="cadastro">
+        <section id="edicao">
             <form action="/update/<%=deck[id].id %>" method="post" onsubmit="editar()">
                 <label for="nome">Nome do deck:</label>
                 <input type="text" id="nome" name="nome" value="<%= deck[id].nome %>" required />
@@ -37,10 +37,10 @@
                 <label for="card3">Link da Terceira carta:</label>
                 <input type="text" id="card3" name="card3" value="<%= deck[id].card3 %>" required />
           
-                <button id="btnCadastrar" type="submit">Alterar</button>
-                <!-- <div id="apagardiv">
+                <button id="btnEditar" type="submit">Alterar</button>
+                <div id="apagardiv">
                     <a id="apagar" href="/delete/<%= deck[id].id %>">Apagar</a>
-                </div> -->
+                </div>
                
         </section>
     </main>
@@ -48,6 +48,11 @@
 
     
     </form>
+    <footer>
+        <p>
+          <a href="https://github.com/iorgeAnjos">@iorgeAnjos</a>
+        </p>
+      </footer>
     <script src="/assets/js/script.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>

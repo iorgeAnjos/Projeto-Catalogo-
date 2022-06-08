@@ -1,6 +1,10 @@
+require('dotenv').config;
 const express = require('express');
 const app = express();
 const path = require('path');
+
+
+const port = process.env.PORT || 3000;
 
 app.use(express.urlencoded());
 app.use(express.static(path.join(__dirname, 'public')));
@@ -48,11 +52,11 @@ app.get("/update/:id", (req, res) => {
   res.render("update", { deck, id });
 })
 
-/* app.get("/delete/:id", (req, res) => {
+app.get("/delete/:id", (req, res) => {
   const id = +req.params.id - 1;
   delete deck[id];
   res.redirect("/");
-}); */
+}); 
 
 app.post('/create', (req, res) => {
   const cards = req.body;
@@ -73,6 +77,6 @@ app.post('/update/:id', (req, res) => {
   res.redirect('/');
 });
 
-app.listen(3000, () =>
-  console.log('Servidor rodando em http://localhost:3000'),
+app.listen(port, () =>
+  console.log(`Servidor rodando em: http://localhost:${port}`),
 );
